@@ -1,4 +1,5 @@
 import logo from "../assets/images/giftmart.png";
+import lkr from "../assets/images/lkr.png";
 import { Fragment, useState } from "react";
 import {
   Dialog,
@@ -387,26 +388,19 @@ export default function NavigationBar() {
                     href="#"
                     className="flex items-center text-gray-700 hover:text-gray-800"
                   >
-                    <img
+                    {/* <img
                       alt=""
                       src="https://tailwindui.com/plus/img/flags/flag-canada.svg"
                       className="block h-auto w-5 shrink-0"
-                    />
-                    <span className="ml-3 block text-sm font-medium">CAD</span>
+                    /> */}
+
+                    <img alt="" src={lkr} className="h-auto w-7" />
+                    <span className="ml-3 block text-sm font-medium">LKR</span>
                     <span className="sr-only">, change currency</span>
                   </a>
                 </div>
 
-                {/* Search */}
-                <div className="flex lg:ml-6">
-                  <a href="#" className="p-2 text-gray-400 hover:text-gray-500">
-                    <span className="sr-only">Search</span>
-                    <MagnifyingGlassIcon
-                      aria-hidden="true"
-                      className="size-6"
-                    />
-                  </a>
-                </div>
+
 
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
