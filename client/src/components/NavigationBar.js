@@ -165,7 +165,34 @@ export default function NavigationBar() {
           className="fixed inset-0 bg-black/25 transition-opacity duration-300 ease-linear data-[closed]:opacity-0"
         />
 
-       
+        <div className="fixed inset-0 z-40 flex">
+          <DialogPanel
+            transition
+            className="relative flex w-full max-w-xs transform flex-col overflow-y-auto bg-white pb-12 shadow-xl transition duration-300 ease-in-out data-[closed]:-translate-x-full"
+          >
+            {/* Links */}
+
+            <div className="space-y-4 border-t border-gray-200 px-4 py-4">
+              <div className="flow-root">
+                <a
+                  href="#"
+                  className="-m-2 block p-2 font-medium text-gray-900"
+                >
+                  Sign in
+                </a>
+              </div>
+              <div className="flow-root">
+                <a
+                  href="#"
+                  className="-m-2 block p-2 font-medium text-gray-900"
+                >
+                  Create account
+                </a>
+              </div>
+            </div>
+          </DialogPanel>
+        </div>
+      </Dialog>
 
      
     </div>
