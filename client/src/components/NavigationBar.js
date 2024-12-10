@@ -184,7 +184,41 @@ export default function NavigationBar() {
                   ))}
                 </TabList>
               </div>
-             
+              <TabPanels as={Fragment}>
+                {navigation.categories.map((category) => (
+                  <TabPanel
+                    key={category.name}
+                    className="space-y-6 px-4 pb-8 pt-4"
+                  >
+                    {category.sections.map((section) => (
+                      <div key={section.name}>
+                        <p
+                          id={`${category.id}-${section.id}-heading-mobile`}
+                          className="font-medium text-gray-900"
+                        >
+                          {section.name}
+                        </p>
+                        <ul
+                          role="list"
+                          aria-labelledby={`${category.id}-${section.id}-heading-mobile`}
+                          className="ml-4 mt-6 flex flex-col space-y-4"
+                        >
+                          {section.items.map((item) => (
+                            <li key={item.name} className="flow-root">
+                              <a
+                                href={item.href}
+                                className="-m-2 block p-2 text-gray-500"
+                              >
+                                {item.name}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </TabPanel>
+                ))}
+              </TabPanels>
             </TabGroup>
 
             <div className="space-y-4 border-t border-gray-200 px-4 py-4">
