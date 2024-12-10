@@ -367,6 +367,17 @@ export default function NavigationBar() {
               </PopoverGroup>
 
               <div className="ml-auto flex items-center">
+                <div className="hidden lg:ml-8 lg:flex mr-6">
+                  <a
+                    href="#"
+                    className="flex items-center text-gray-700 hover:text-gray-800"
+                  >
+                    <img alt="" src={lkr} className="h-auto w-7" />
+                    <span className="ml-3 block text-sm font-medium">LKR</span>
+                    <span className="sr-only">, change currency</span>
+                  </a>
+                </div>
+
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   <a
                     href="#"
@@ -374,33 +385,7 @@ export default function NavigationBar() {
                   >
                     Sign in
                   </a>
-                  <span aria-hidden="true" className="h-6 w-px bg-gray-200" />
-                  <a
-                    href="#"
-                    className="text-sm font-medium text-gray-700 hover:text-gray-800"
-                  >
-                    Create account
-                  </a>
                 </div>
-
-                <div className="hidden lg:ml-8 lg:flex">
-                  <a
-                    href="#"
-                    className="flex items-center text-gray-700 hover:text-gray-800"
-                  >
-                    {/* <img
-                      alt=""
-                      src="https://tailwindui.com/plus/img/flags/flag-canada.svg"
-                      className="block h-auto w-5 shrink-0"
-                    /> */}
-
-                    <img alt="" src={lkr} className="h-auto w-7" />
-                    <span className="ml-3 block text-sm font-medium">LKR</span>
-                    <span className="sr-only">, change currency</span>
-                  </a>
-                </div>
-
-
 
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
