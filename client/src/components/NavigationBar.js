@@ -260,7 +260,17 @@ export default function NavigationBar() {
                 <Bars3Icon aria-hidden="true" className="size-6" />
               </button>
 
-            
+              {/* Logo */}
+              <div className="ml-4 flex lg:ml-0">
+                <a href="#">
+                  <span className="sr-only">Your Company</span>
+                  <img
+                    alt=""
+                    src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
+                    className="h-8 w-auto"
+                  />
+                </a>
+              </div>
 
             
 
