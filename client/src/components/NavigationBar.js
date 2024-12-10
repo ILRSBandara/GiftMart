@@ -171,6 +171,21 @@ export default function NavigationBar() {
             className="relative flex w-full max-w-xs transform flex-col overflow-y-auto bg-white pb-12 shadow-xl transition duration-300 ease-in-out data-[closed]:-translate-x-full"
           >
             {/* Links */}
+            <TabGroup className="mt-1">
+              <div className="border-b border-gray-200">
+                <TabList className="-mb-px flex space-x-8 px-4">
+                  {navigation.categories.map((category) => (
+                    <Tab
+                      key={category.name}
+                      className="flex-1 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-base font-medium text-gray-900 data-[selected]:border-blue-600 data-[selected]:text-blue-600"
+                    >
+                      {category.name}
+                    </Tab>
+                  ))}
+                </TabList>
+              </div>
+             
+            </TabGroup>
 
             <div className="space-y-4 border-t border-gray-200 px-4 py-4">
               <div className="flow-root">
